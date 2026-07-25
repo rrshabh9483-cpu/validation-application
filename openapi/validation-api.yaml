@@ -1,3 +1,4 @@
+#openapi is the starting point of correct yaml file that is redocly convert this yaml file into html file
 openapi: 3.1.0
 info:
   title: User Validation API
@@ -7,7 +8,7 @@ info:
     email: support@example.com
   version: 1.0.0
 servers:
-  - url: 'http://localhost:9292'
+  - url: 'http://localhost:9293'
     description: Local development server
 tags:
   - name: Users
