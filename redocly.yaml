@@ -1,0 +1,20 @@
+apis:
+  main:
+    root: openapi/openapi.yaml
+
+extends:
+  - recommended
+
+rules:
+  no-unused-components: warn
+  operation-operationId: warn
+  security-defined: off
+  info-license: off
+  no-server-example.com: off
+
+theme:
+  openapi:
+    generateCodeSamples:
+      languages:
+        - lang: curl
+        - lang: JavaScript

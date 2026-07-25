@@ -1,0 +1,19 @@
+{
+  "name": "validation-api-docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Swagger CLI and Redocly tooling for the User Validation API",
+  "scripts": {
+    "fetch-spec": "node scripts/fetch-openapi.js",
+    "validate-spec": "swagger-cli validate openapi/openapi.json",
+    "bundle-spec": "swagger-cli bundle openapi/openapi.json -o openapi/openapi.yaml -t yaml",
+    "sync-spec": "npm run fetch-spec && npm run validate-spec && npm run bundle-spec",
+    "docs:lint": "redocly lint openapi/openapi.yaml",
+    "docs:preview": "redocly preview-docs openapi/openapi.yaml",
+    "docs:build": "redocly build-docs openapi/openapi.yaml -o docs/index.html"
+  },
+  "devDependencies": {
+    "@apidevtools/swagger-cli": "^4.0.4",
+    "@redocly/cli": "^1.34.0"
+  }
+}
