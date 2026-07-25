@@ -12,9 +12,15 @@ rules:
   info-license: off
   no-server-example.com: off
 
-theme:
-  openapi:
-    generateCodeSamples:
-      languages:
-        - lang: curl
-        - lang: JavaScript
+#theme:
+#  openapi:
+#    generateCodeSamples:
+#      languages:
+#        - lang: curl
+#        - lang: JavaScript
+referenceDocs:
+  theme:
+    colors:
+      primary:
+        main: '#0066cc'
+
