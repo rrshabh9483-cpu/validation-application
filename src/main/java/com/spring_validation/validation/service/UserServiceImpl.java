@@ -19,7 +19,7 @@ public class UserServiceImpl {
                 .mobile(userRequest.getMobile())
                 .gender(userRequest.getGender())
                 .age(userRequest.getAge())
-                .nationality(userRequest.getNationality())
+                .state(userRequest.getState())
                 .build();
         return userRepositoy.save(mycreatedUser);
     }

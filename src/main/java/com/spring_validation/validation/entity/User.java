@@ -21,6 +21,6 @@ public class User {
     private String mobile;
     private String gender;
     private int age;
-    private String nationality;
+    private String state;
 
 }
