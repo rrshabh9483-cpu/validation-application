@@ -36,4 +36,7 @@ public class User {
 
     @Schema(description = "State of residence", example = "Bihar")
     private String state;
+
+    @Transient
+    private AddressOfUsers address;
 }
