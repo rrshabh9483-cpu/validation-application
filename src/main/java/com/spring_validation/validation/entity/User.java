@@ -4,6 +4,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "myuserstable")
 @Data
@@ -38,5 +41,5 @@ public class User {
     private String state;
 
     @Transient
-    private AddressOfUsers address;
+    private List<AddressOfUsers> addresses = new ArrayList<>();
 }
