@@ -40,6 +40,8 @@ public class User {
     @Schema(description = "State of residence", example = "Bihar")
     private String state;
 
-    @Transient
+    //  Correct mapping for basic collection
+    @ElementCollection
+    @CollectionTable(name = "addresss_for_users", joinColumns = @JoinColumn(name = "user_id"))
     private List<AddressOfUsers> addresses = new ArrayList<>();
 }
