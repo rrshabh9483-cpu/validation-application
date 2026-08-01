@@ -43,15 +43,15 @@ public class UserController {
         return ResponseEntity.ok(userService.getAllUser());
     }
 
-    @GetMapping("/user/{id}")
+    @GetMapping("/user/{userId}")
     @Operation(summary = "Get user by ID", description = "Returns a single user for the given ID")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "User found",
                     content = @Content(schema = @Schema(implementation = User.class))),
             @ApiResponse(responseCode = "404", description = "User not found")
     })
-    public ResponseEntity<User> getAllUser(
-            @Parameter(description = "User ID", example = "1") @PathVariable int id) {
-        return ResponseEntity.ok(userService.getAllUser(id));
+    public ResponseEntity<User> getUserById(
+            @Parameter(description = "User ID", example = "1") @PathVariable int userId) {
+        return ResponseEntity.ok(userService.getAllUser(userId));
     }
 }
